@@ -17,7 +17,7 @@ def index(request):
 	return HttpResponse("Version de base de datos: %s" % version)
 
 def lista(request):
-	return render('inicio.html',{'datos':datos})
+	return HttpResponse(datos)
 
 def detalle(request, id):
 	sql = "SELECT * FROM agenda WHERE id = %s"
